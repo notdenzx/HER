@@ -37,7 +37,7 @@ body {
 .navbar ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     padding: 15px 30px;
     border-radius: 50px;
@@ -49,7 +49,7 @@ body {
 .navbar ul li a.active {
     background: var(--purple);
     color: var(--white);
-    box-shadow: 0 0 18px var(--purple-glow);
+    box-shadow: 0 0 8px var(--purple-glow);
 }
 
 /* ── SECTIONS ── */
@@ -63,7 +63,7 @@ section {
 
 section h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 90px;
+    font-size: 70px;
     color: var(--white);
     text-shadow: 0 0 40px rgba(176, 10, 226, 0.4);
     letter-spacing: 4px;
@@ -87,7 +87,7 @@ section h4 {
 }
 
 section h6 {
-    font-size: 30px;
+    font-size: 15px;
     color: rgba(255,255,255,0.85);
     letter-spacing: 1px;
     max-width: 700px;
@@ -166,7 +166,7 @@ section h6 {
 
 .home-left h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 7vw, 90px);
+    font-size: clamp(48px, 7vw, 70px);
     color: var(--white);
     text-shadow: 0 0 40px rgba(176,10,226,0.4);
     letter-spacing: 4px;
@@ -192,7 +192,7 @@ section h6 {
     background: rgba(10, 10, 20, 0.6);
     border: 1px solid rgba(124,58,237,0.35);
     border-radius: 20px;
-    padding: 28px 32px;
+    padding: 20px 25px;
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 40px rgba(124,58,237,0.2), inset 0 1px 0 rgba(255,255,255,0.06);
     position: relative;
@@ -210,7 +210,7 @@ section h6 {
 }
 
 .days-label {
-    font-size: 10px;
+    font-size: 8px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
@@ -227,7 +227,7 @@ section h6 {
 
 .days-number {
     font-family: 'Playfair Display', serif;
-    font-size: 72px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--white);
     line-height: 1;
@@ -240,14 +240,14 @@ section h6 {
 }
 
 .days-unit {
-    font-size: 18px;
+    font-size: 10px;
     color: rgba(255,255,255,0.45);
     letter-spacing: 2px;
     font-family: 'DM Sans', sans-serif;
 }
 
 .days-subtext {
-    font-size: 13px;
+    font-size: 10px;
     color: rgba(255,255,255,0.4);
     font-style: italic;
     font-family: 'Playfair Display', serif;
@@ -258,7 +258,7 @@ section h6 {
     margin-top: 16px;
     padding-top: 14px;
     border-top: 1px solid rgba(255,255,255,0.07);
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.28);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -275,7 +275,7 @@ section h6 {
     background: rgba(10, 10, 20, 0.6);
     border: 1px solid rgba(232,121,160,0.25);
     border-radius: 20px;
-    padding: 24px 28px;
+    padding: 10px 15px;
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 40px rgba(232,121,160,0.08);
     position: relative;
@@ -293,7 +293,7 @@ section h6 {
 }
 
 .song-label {
-    font-size: 15px;
+    font-size: 8px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.3);
@@ -309,8 +309,8 @@ section h6 {
 }
 
 .song-disc-mini {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: repeating-radial-gradient(circle at center, #111 0%, #222 5%, #111 7%);
     border: 3px solid #e879a0;
@@ -333,13 +333,13 @@ section h6 {
 
 .song-name {
     font-family: 'Playfair Display', serif;
-    font-size: 25px;
+    font-size: 15px;
     color: var(--white);
     line-height: 1.2;
 }
 
 .song-artist {
-    font-size: 15px;
+    font-size: 10px;
     color: rgba(255,255,255,0.4);
     font-family: 'DM Sans', sans-serif;
 }
@@ -380,14 +380,14 @@ section h6 {
 .lyric-line:nth-child(4) { animation-delay: 0.55s; }
 
 .lyric-icon {
-    font-size: 18px;
+    font-size: 10px;
     flex-shrink: 0;
     filter: drop-shadow(0 0 6px rgba(232,121,160,0.5));
 }
 
 .lyric-text {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 12px;
     font-style: italic;
     color: rgba(255,255,255,0.6);
     line-height: 1.4;
