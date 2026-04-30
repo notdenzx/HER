@@ -10,6 +10,41 @@
 </head>
 <body>
 
+    <!-- LOGIN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="floating-hearts-login" id="floatingHeartsLogin"></div>
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-icon">💜</div>
+                <h2 class="login-title">All About Us</h2>
+                <p class="login-sub">Kim & Den</p>
+            </div>
+
+            <div class="login-form">
+                <div class="input-group">
+                    <label class="input-label">Who are you?</label>
+                    <input type="text" id="loginUsername" class="login-input" placeholder="naya or den" autocomplete="off" />
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPassword" class="login-input" placeholder="••••" autocomplete="off" />
+                        <button class="eye-btn" id="eyeBtn" type="button">👁</button>
+                    </div>
+                    <div class="input-hint">💡 Hint: our monthsary</div>
+                </div>
+
+                <div class="login-error" id="loginError">Incorrect username or password. Try again 💔</div>
+
+                <button class="login-btn" id="loginBtn">Enter Our World ✦</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT (hidden until login) -->
+    <div class="main-content" id="mainContent" style="display:none;">
+
     <nav class="navbar">
         <ul>
             <li><a href="#Home">Home</a></li>
@@ -351,6 +386,8 @@
             </div>
         </div>
     </section>
+
+    </div><!-- end .main-content -->
 
     <audio id="audioPlayer" preload="none"></audio>
     <script src="script.js"></script>
