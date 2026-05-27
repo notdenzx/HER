@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- LOGIN OVERLAY -->
     <div class="login-overlay" id="loginOverlay">
         <div class="floating-hearts-login" id="floatingHeartsLogin"></div>
         <div class="login-card">
@@ -30,19 +29,18 @@
                     <label class="input-label">Password</label>
                     <div class="password-wrapper">
                         <input type="password" id="loginPassword" class="login-input" placeholder="••••" autocomplete="off" />
-                        <button class="eye-btn" id="eyeBtn" type="button">👁</button>
+                        <button class="eye-btn" id="eyeBtn" type="button">👁️</button>
                     </div>
                     <div class="input-hint">💡 Hint: our monthsary</div>
                 </div>
 
                 <div class="login-error" id="loginError">Incorrect username or password. Try again 💔</div>
 
-                <button class="login-btn" id="loginBtn">Enter Our World ✦</button>
+                <button type="button" class="login-btn" id="loginBtn">Enter Our World ✦</button>
             </div>
         </div>
     </div>
 
-    <!-- MAIN CONTENT (hidden until login) -->
     <div class="main-content" id="mainContent" style="display:none;">
 
     <nav class="navbar">
@@ -79,7 +77,6 @@
                     </div>
                 </div>
 
-                <!-- THEME SONG CARD -->
                 <div class="theme-song-card">
                     <div class="song-label">✦ Our Theme Song</div>
                     <div class="song-title-row">
@@ -240,7 +237,6 @@
         </div>
     </section>
 
-    <!-- MONTHSARY DATE -->
     <section id="monthsary">
         <h2>❤️ Monthsary Dates</h2>
         <h3>Here are some of our monthsary memories so far: </h3>
@@ -336,7 +332,7 @@
     </section>
 
     <section id="randomdate">
-        <h2>📸 Random Dates</h2>
+        <h2>📷 Random Dates</h2>
         <p class="gallery-subtitle">✨ Tap a photo to reveal the memory</p>
         <div class="gallery-grid">
             <div class="gallery-item">
@@ -344,8 +340,7 @@
                 <div class="gallery-overlay">
                     <div class="ov-label">📍 BSU - Arasof Campus</div>
                     <div class="ov-icon">💐</div>
-                    <div class="ov-text">The first flower i gave it to her and it so funny kazi i don't have any idea on what's her 
-                        favorite flower</div>
+                    <div class="ov-text">The first flower i gave it to her and it so funny kasi i don't have any idea on what's her favorite flower</div>
                 </div>
             </div>
             <div class="gallery-item">
@@ -376,7 +371,7 @@
                 <img src="assets/photos/d5.jpg" alt="Ms. Secretary with her baby">
                 <div class="gallery-overlay">
                     <div class="ov-label">📍 BSU - Arasof Campus</div>
-                    <div class="ov-icon">📃</div>
+                    <div class="ov-icon">📄</div>
                     <div class="ov-text">Ms. Secretary with her baby</div>
                 </div>
             </div>
@@ -420,7 +415,7 @@
                     <div class="ov-text">Walking with her while raining felt like magic.</div>
                 </div>
             </div>
-                <div class="gallery-item">
+            <div class="gallery-item">
                 <img src="assets/photos/d11.jpg" alt="Memorable Day">
                 <div class="gallery-overlay">
                     <div class="ov-label">📍Reyes Haircutter</div>
@@ -431,405 +426,7 @@
         </div>
     </section>
 
-    </div><!-- end .main-content -->
-
-    <audio id="audioPlayer" preload="none"></audio>
+    </div><audio id="audioPlayer" preload="none"></audio>
     <script src="script.js"></script>
 </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL ABOUT US</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- LOGIN OVERLAY -->
-    <div class="login-overlay" id="loginOverlay">
-        <div class="floating-hearts-login" id="floatingHeartsLogin"></div>
-        <div class="login-card">
-            <div class="login-header">
-                <div class="login-icon">💜</div>
-                <h2 class="login-title">All About Us</h2>
-                <p class="login-sub">Kim & Den</p>
-            </div>
-
-            <div class="login-form">
-                <div class="input-group">
-                    <label class="input-label">Who are you?</label>
-                    <input type="text" id="loginUsername" class="login-input" placeholder="naya or den" autocomplete="off" />
-                </div>
-
-                <div class="input-group">
-                    <label class="input-label">Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" id="loginPassword" class="login-input" placeholder="••••" autocomplete="off" />
-                        <button class="eye-btn" id="eyeBtn" type="button">👁</button>
-                    </div>
-                    <div class="input-hint">💡 Hint: our monthsary</div>
-                </div>
-
-                <div class="login-error" id="loginError">Incorrect username or password. Try again 💔</div>
-
-                <button class="login-btn" id="loginBtn">Enter Our World ✦</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT (hidden until login) -->
-    <div class="main-content" id="mainContent" style="display:none;">
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Music">Music</a></li>
-            <li><a href="#monthsary">Monthsary</a></li>
-            <li><a href="#lego">Lego</a></li>
-            <li><a href="#randomdate">Random Date</a></li>
-        </ul>
-    </nav>
-
-    <section id="Home">
-
-        <div class="floating-hearts" id="floatingHearts"></div>
-        <div class="home-content">
-
-            <div class="home-left">
-                <div>
-                    <h1>All About US</h1>
-                    <h4>Kim and Den </h4>
-                    <h6>Let me show you what we've been up to!</h6>
-                </div>
-
-
-                <div class="days-counter-card">
-                    <div class="days-label">✦ Days Together</div>
-                    <div class="days-number-row">
-                        <div class="days-number" id="daysCount">0</div>
-                        <div class="days-unit">days</div>
-                    </div>
-                    <div class="days-start-date">
-                        Since <span>January 20, 2026</span>
-                    </div>
-                </div>
-
-                <!-- THEME SONG CARD -->
-                <div class="theme-song-card">
-                    <div class="song-label">✦ Our Theme Song</div>
-                    <div class="song-title-row">
-                        <div class="song-disc-mini" id="miniDisc">
-                            <div class="disc-dot"></div>
-                        </div>
-                        <div>
-                            <div class="song-name">I Like Me Better</div>
-                            <div class="song-artist">Lauv</div>
-                        </div>
-                    </div>
-
-                    <div class="lyric-lines">
-                        <div class="lyric-line">
-                            <span class="lyric-icon">💫</span>
-                            <div class="lyric-text"><em>"I like me better when I'm with you"</em></div>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-            
-            <div class="home-right">
-                <div class="home-sticker">
-                    <img src="assets/photos/sticker1.png" alt="Cute Sticker">
-                    <img src="assets/photos/sticker2.png" alt="Cute Sticker">
-                    <img src="assets/photos/sticker3.png" alt="Cute Sticker">
-                    <img src="assets/photos/sticker4.png" alt="Cute Sticker">
-                    <img src="assets/photos/sticker5.png" alt="Cute Sticker">
-                    <img src="assets/photos/sticker6.png" alt="Cute Sticker">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="Music">
-        <h2>🎵 Songs that reminds me of us</h2>
-        <div class="music-player-wrapper">
-            <div class="now-playing-card">
-                <div class="np-label">Now Playing</div>
-                <div class="np-title" id="npTitle">I Like Me Better</div>
-                <div class="np-artist" id="npArtist">Lauv</div>
-                <div class="album-art">
-                    <div class="vinyl" id="vinylDisc">
-                        <div class="vinyl-center"></div>
-                    </div>
-                </div>
-                <div class="progress-bar-wrap" id="progressWrap">
-                    <div class="progress-bar-fill" id="progressFill"></div>
-                </div>
-                <div class="time-row">
-                    <span id="currentTime">0:00</span>
-                    <span id="totalTime">0:00</span>
-                </div>
-                <div class="controls">
-                    <button class="ctrl-btn" id="prevBtn">⏮</button>
-                    <button class="ctrl-btn play-btn" id="playBtn">▶</button>
-                    <button class="ctrl-btn" id="nextBtn">⏭</button>
-                </div>
-                <div class="volume-row">
-                    <span>🔈</span>
-                    <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.7">
-                    <span>🔊</span>
-                </div>
-            </div>
-
-            <div class="track-list" id="trackList">
-                <div class="track-item active" data-index="0" data-src="assets/music/Lauv - I Like Me Better [Official Audio].mp3"
-                     data-title="I Like Me Better" data-artist="Lauv">
-                    <div class="track-num">1</div>
-                    <div class="track-info">
-                        <div class="track-name">I Like Me Better</div>
-                        <div class="track-artist">Lauv</div>
-                    </div>
-                    <div class="track-dur">3:17</div>
-                </div>
-                <div class="track-item" data-index="1" data-src="assets/music/Lauv - Paris In The Rain (Lyric Video).mp3"
-                     data-title="Paris In The Rain" data-artist="Lauv">
-                    <div class="track-num">2</div>
-                    <div class="track-info">
-                        <div class="track-name">Paris In The Rain</div>
-                        <div class="track-artist">Lauv</div>
-                    </div>
-                    <div class="track-dur">3:25</div>
-                </div>
-                <div class="track-item" data-index="2" data-src="assets/music/Saan_ - Maki (Official Lyric Video).mp3"
-                     data-title="Saan" data-artist="Maki">
-                    <div class="track-num">3</div>
-                    <div class="track-info">
-                        <div class="track-name">Saan</div>
-                        <div class="track-artist">Maki</div>
-                    </div>
-                    <div class="track-dur">3:26</div>
-                </div>
-                <div class="track-item" data-index="3" data-src="assets/music/SUD - Dumaloy (Official Lyric Video).mp3"
-                     data-title="Dumaloy" data-artist="SUD">
-                    <div class="track-num">4</div>
-                    <div class="track-info">
-                        <div class="track-name">Dumaloy</div>
-                        <div class="track-artist">SUD</div>
-                    </div>
-                    <div class="track-dur">4:19</div>
-                </div>
-                <div class="track-item" data-index="4" data-src="assets/music/Earl Agustin - A Little Bit (Official Lyric Video).mp3"
-                     data-title="A Little Bit" data-artist="Earl Agustin">
-                    <div class="track-num">5</div>
-                    <div class="track-info">
-                        <div class="track-name">A Little Bit</div>
-                        <div class="track-artist">Earl Agustin</div>
-                    </div>
-                    <div class="track-dur">4:39</div>
-                </div>
-                <div class="track-item" data-index="5" data-src="assets/music/It Might Be You (1).mp3"
-                     data-title="It Might Be You" data-artist="Stephen Bishop">
-                    <div class="track-num">6</div>
-                    <div class="track-info">
-                        <div class="track-name">It Might Be You</div>
-                        <div class="track-artist">Stephen Bishop</div>
-                    </div>
-                    <div class="track-dur">4:18</div>
-                </div>
-                <div class="track-item" data-index="6" data-src="assets/music/LANY - anything 4 u (official lyric video).mp3"
-                     data-title="Anything 4 u" data-artist="LANY">
-                    <div class="track-num">7</div>
-                    <div class="track-info">
-                        <div class="track-name">Anything 4 u</div>
-                        <div class="track-artist">LANY</div>
-                    </div>
-                    <div class="track-dur">3:14</div>
-                </div>
-                <div class="track-item" data-index="7" data-src="assets/music/LANY  you! (official lyric video).mp3"
-                     data-title="You!" data-artist="LANY">
-                    <div class="track-num">8</div>
-                    <div class="track-info">
-                        <div class="track-name">You!</div>
-                        <div class="track-artist">LANY</div>
-                    </div>
-                    <div class="track-dur">4:34</div>
-                </div>
-                <div class="track-item" data-index="8" data-src="assets/music/Sinta.mp3"
-                     data-title="Sinta" data-artist="CLUBS">
-                    <div class="track-num">9</div>
-                    <div class="track-info">
-                        <div class="track-name">Sinta</div>
-                        <div class="track-artist">CLUBS</div>
-                    </div>
-                    <div class="track-dur">6:43</div>
-                </div>
-                <div class="track-item" data-index="9" data-src="assets/music/Be With You.mp3"
-                     data-title="Be With You" data-artist="The Ridleys">
-                    <div class="track-num">10</div>
-                    <div class="track-info">
-                        <div class="track-name">Be With You</div>
-                        <div class="track-artist">The Ridleys</div>
-                    </div>
-                    <div class="track-dur">4:01</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MONTHSARY DATE -->
-    <section id="monthsary">
-        <h2>❤️ Monthsary Dates</h2>
-        <h3>Here are some of our monthsary memories so far: </h3>
-        <div class="monthsary-grid">
-            <div class="monthsary-card">
-                <div class="card-img-container">
-                    <img class="card-img" src="assets/photos/image1.png" alt="Your Photo">
-                </div>
-                <div class="card-body">
-                    <div class="card-date">1st Month • February 20, 2026</div>
-                    <div class="card-title">The Very Beginning</div>
-                    <p class="card-text">Every love story has a first page. Ours started with a smile, a conversation, and a feeling I never wanted to let go of.</p>
-                </div>
-            </div>
-            <div class="monthsary-card">
-                <div class="card-img-container">
-                    <img class="card-img" src="assets/photos/image2.png" alt="Your Photo">
-                </div>
-                <div class="card-body">
-                    <div class="card-date">2nd Month • March 20, 2026</div>
-                    <div class="card-title">2nd Monthsary</div>
-                    <p class="card-text">I love spending time with you, even in the most simpliest ways.</p>
-                </div>
-            </div>
-            <div class="monthsary-card">
-                <div class="card-img-container">
-                    <img class="card-img" src="assets/photos/image3.png" alt="Your Photo">
-                </div>
-                <div class="card-body">
-                    <div class="card-date">3rd Month • April 20, 2026</div>
-                    <div class="card-title">3rd Monthsary</div>
-                    <p class="card-text">Sitting beside you, watching your eyes light up when you talk about things you love - i want to that for the rest of my life.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lego">
-        <h2>🧱 Our Lego Memories</h2>
-        <h3>One of our tradition when it comes to celebrating our love, we build flower lego different flower every month.</h3>
-        <div class="lego-grid">
-            <div class="lego-card">
-                <div class="lego-img-container">
-                    <img class="lego-img" src="assets/photos/lego1.png" alt="Lego Creation 1">
-                </div>
-                <div class="lego-body">
-                    <div class="card-date">1st Month</div>
-                    <div class="lego-title">Tulips</div>
-                    <p class="lego-text">Our first flower lego creation - a beautiful purple tulips made with love and patience. Every brick represents a moment we spent together.</p>
-                </div>
-            </div>
-            <div class="lego-card">
-                <div class="lego-img-container">
-                    <img class="lego-img" src="assets/photos/lego2.png" alt="Lego Creation 2">
-                </div>
-                <div class="lego-body">
-                    <div class="card-date">2nd Month</div>
-                    <div class="lego-title">Peony</div>
-                    <p class="lego-text">A vibrant flower that symbolizes our growing love. We spent hours perfecting every detail to make it just right.</p>
-                </div>
-            </div>
-            <div class="lego-card">
-                <div class="lego-img-container">
-                    <img class="lego-img" src="assets/photos/lego3.png" alt="Lego Creation 3">
-                </div>
-                <div class="lego-body">
-                    <div class="card-date">3rd Month</div>
-                    <div class="lego-title">Daisy</div>
-                    <p class="lego-text">And this flower remarks our third month together.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="randomdate">
-        <h2>📸 Random Dates</h2>
-        <p class="gallery-subtitle">✨ Tap a photo to reveal the memory</p>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/photos/d1.jpg" alt="First Flower">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 BSU - Arasof Campus</div>
-                    <div class="ov-icon">💐</div>
-                    <div class="ov-text">The first flower i gave it to her and it so funny kazi i don't have any idea on what's her 
-                        favorite flower</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d2.jpg" alt="First Alone Date">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 Koffie Kiosk</div>
-                    <div class="ov-icon">🍵</div>
-                    <div class="ov-text">The first alone date we had together and first koffie kiosk together(ps. approved ang coffee).</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d3.jpg" alt="First Ice Cream Date">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 BSU - Arasof Campus</div>
-                    <div class="ov-icon">🍦</div>
-                    <div class="ov-text">It was the first ever ice cream date takas pa yan HAHAHA.</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d4.jpg" alt="First Matabungkay not as a friend HAHAHA">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 DK Cafe - Matabungkay</div>
-                    <div class="ov-icon">💞</div>
-                    <div class="ov-text">The first time she went to Matabungkay not as a friend, we tried the DK Cafe and she loves it.</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d5.jpg" alt="Ms. Secretary with her baby">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 BSU - Arasof Campus</div>
-                    <div class="ov-icon">📃</div>
-                    <div class="ov-text">Ms. Secretary with her baby</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d6.jpg" alt="First Christmas Together">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 Kim's House</div>
-                    <div class="ov-icon">🎄</div>
-                    <div class="ov-text">The first Christmas we spent together.</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d7.jpg" alt="Ukay-ukay Date">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍 Nasugbu</div>
-                    <div class="ov-icon">👚</div>
-                    <div class="ov-text">Ukay-ukay date together one of my fantasy date with someone</div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/photos/d8.jpg" alt="Memorable Day">
-                <div class="gallery-overlay">
-                    <div class="ov-label">📍Den's Home</div>
-                    <div class="ov-icon">🥰</div>
-                    <div class="ov-text">A memorable day that we spent together, first overnight as a couple.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    </div><!-- end .main-content -->
-
-    <audio id="audioPlayer" preload="none"></audio>
-    <script src="script.js"></script>
-</body>
->>>>>>> 4dd3ae698ca96402ea9f7ea35cbc4cf313a993f1
 </html>
