@@ -399,6 +399,43 @@ section h6 {
     font-weight: 700;
 }
 
+/* Custom image styles for added images */
+.lego,
+.monthsary {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.lego {
+    max-width: 220px;
+    animation: floatSticker 5s ease-in-out infinite;
+}
+
+.monthsary {
+    max-width: 280px;
+    filter: saturate(1.05) drop-shadow(0 12px 24px rgba(0,0,0,0.38));
+}
+
+.lego:hover,
+.monthsary:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(124,58,237,0.22);
+}
+
+@media (max-width: 820px) {
+    .lego,
+    .monthsary {
+        max-width: 45vw;
+    }
+}
+
 /* ── HOME RIGHT — POLAROID STACK ── */
 .home-right {
     display: flex;

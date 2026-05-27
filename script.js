@@ -229,10 +229,44 @@ function initApp() {
 
     loadTrack(0);
 
-    // ── Gallery reveal ──
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => { item.classList.toggle('revealed'); });
-    });
+    // ── Gallery reveal (delegated) ──
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (galleryGrid) {
+        // Click/tap via delegation so newly added items are handled too
+        galleryGrid.addEventListener('click', (e) => {
+            const item = e.target.closest('.gallery-item');
+            if (!item) return;
+            item.classList.toggle('revealed');
+        });
+
+        // Make existing items keyboard accessible and ensure Enter/Space toggles reveal
+        function makeItemAccessible(item) {
+            if (!item.getAttribute('tabindex')) item.setAttribute('tabindex', '0');
+            item.addEventListener('keydown', (ev) => {
+                if (ev.key === 'Enter' || ev.key === ' ') {
+                    ev.preventDefault();
+                    item.classList.toggle('revealed');
+                }
+            });
+        }
+
+        galleryGrid.querySelectorAll('.gallery-item').forEach(makeItemAccessible);
+
+        // Observe for dynamically added gallery items (e.g., when user adds images)
+        const observer = new MutationObserver(mutations => {
+            for (const m of mutations) {
+                for (const node of m.addedNodes) {
+                    if (node.nodeType === 1) {
+                        if (node.classList && node.classList.contains('gallery-item')) makeItemAccessible(node);
+                        // also handle nested gallery-item elements
+                        node.querySelectorAll && node.querySelectorAll('.gallery-item').forEach(makeItemAccessible);
+                    }
+                }
+            }
+        });
+
+        observer.observe(galleryGrid, { childList: true, subtree: true });
+    }
 
     // ── Navbar active section highlight ──
     const sections = document.querySelectorAll('section');
