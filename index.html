@@ -10,6 +10,41 @@
 </head>
 <body>
 
+    <!-- LOGIN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="floating-hearts-login" id="floatingHeartsLogin"></div>
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-icon">💜</div>
+                <h2 class="login-title">All About Us</h2>
+                <p class="login-sub">Kim & Den</p>
+            </div>
+
+            <div class="login-form">
+                <div class="input-group">
+                    <label class="input-label">Who are you?</label>
+                    <input type="text" id="loginUsername" class="login-input" placeholder="naya or den" autocomplete="off" />
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPassword" class="login-input" placeholder="••••" autocomplete="off" />
+                        <button class="eye-btn" id="eyeBtn" type="button">👁</button>
+                    </div>
+                    <div class="input-hint">💡 Hint: our monthsary</div>
+                </div>
+
+                <div class="login-error" id="loginError">Incorrect username or password. Try again 💔</div>
+
+                <button class="login-btn" id="loginBtn">Enter Our World ✦</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT (hidden until login) -->
+    <div class="main-content" id="mainContent" style="display:none;">
+
     <nav class="navbar">
         <ul>
             <li><a href="#Home">Home</a></li>
@@ -174,7 +209,7 @@
                     </div>
                     <div class="track-dur">3:14</div>
                 </div>
-                <div class="track-item" data-index="7" data-src="assets/music/LANY - you! (official lyric video).mp3"
+                <div class="track-item" data-index="7" data-src="assets/music/LANY  you! (official lyric video).mp3"
                      data-title="You!" data-artist="LANY">
                     <div class="track-num">8</div>
                     <div class="track-info">
@@ -217,7 +252,7 @@
                 <div class="card-body">
                     <div class="card-date">1st Month • February 20, 2026</div>
                     <div class="card-title">The Very Beginning</div>
-                    <p class="card-text">Every love story has a first page. Ours started with a smile, a conversation, and a feeling I never wanted to let go of. 💙</p>
+                    <p class="card-text">Every love story has a first page. Ours started with a smile, a conversation, and a feeling I never wanted to let go of.</p>
                 </div>
             </div>
             <div class="monthsary-card">
@@ -226,8 +261,8 @@
                 </div>
                 <div class="card-body">
                     <div class="card-date">2nd Month • March 20, 2026</div>
-                    <div class="card-title">Late Night Drives</div>
-                    <p class="card-text">Those late nights talking about everything and nothing — that's when I knew you were someone truly special.</p>
+                    <div class="card-title">2nd Monthsary</div>
+                    <p class="card-text">I love spending time with you, even in the most simpliest ways.</p>
                 </div>
             </div>
             <div class="monthsary-card">
@@ -236,9 +271,19 @@
                 </div>
                 <div class="card-body">
                     <div class="card-date">3rd Month • April 20, 2026</div>
-                    <div class="card-title">Coffee & Conversations</div>
-                    <p class="card-text">Sitting across from you, watching your eyes light up when you talk about things you love — my favorite memory so far.</p>
+                    <div class="card-title">3rd Monthsary</div>
+                    <p class="card-text">Sitting beside you, watching your eyes light up when you talk about things you love - i want to that for the rest of my life.</p>
+                </div>   
+            </div>
+            <div class="monthsary-card">
+                <div class="card-img-container">
+                    <img class="card-img" src="assets/photos/image4.png" alt="Your Photo">
                 </div>
+                <div class="card-body">
+                    <div class="card-date">4th Month • May 20, 2026</div>
+                    <div class="card-title">4th Monthsary</div>
+                    <p class="card-text">This kind of date with you is one of the best memories I have.</p>
+                </div>   
             </div>
         </div>
     </section>
@@ -253,8 +298,8 @@
                 </div>
                 <div class="lego-body">
                     <div class="card-date">1st Month</div>
-                    <div class="lego-title">Beautiful Flower</div>
-                    <p class="lego-text">Our first flower lego creation - a beautiful bouquet made with love and patience. Every brick represents a moment we spent together.</p>
+                    <div class="lego-title">Tulips</div>
+                    <p class="lego-text">Our first flower lego creation - a beautiful purple tulips made with love and patience. Every brick represents a moment we spent together.</p>
                 </div>
             </div>
             <div class="lego-card">
@@ -263,8 +308,8 @@
                 </div>
                 <div class="lego-body">
                     <div class="card-date">2nd Month</div>
-                    <div class="lego-title">Colorful Rose</div>
-                    <p class="lego-text">A vibrant rose that symbolizes our growing love. We spent hours perfecting every detail to make it just right.</p>
+                    <div class="lego-title">Peony</div>
+                    <p class="lego-text">A vibrant flower that symbolizes our growing love. We spent hours perfecting every detail to make it just right.</p>
                 </div>
             </div>
             <div class="lego-card">
@@ -273,8 +318,18 @@
                 </div>
                 <div class="lego-body">
                     <div class="card-date">3rd Month</div>
-                    <div class="lego-title">Rainbow Garden</div>
-                    <p class="lego-text">Our masterpiece - a rainbow garden full of different flowers. Each color tells a story of our special moments together.</p>
+                    <div class="lego-title">Daisy</div>
+                    <p class="lego-text">And this flower remarks our third month together.</p>
+                </div>
+            </div>
+            <div class="lego-card">
+                <div class="lego-img-container">
+                    <img class="lego-img" src="assets/photos/lego4.png" alt="Lego Creation 4">
+                </div>
+                <div class="lego-body">
+                    <div class="card-date">4th Month</div>
+                    <div class="lego-title">Morning Glory</div>
+                    <p class="lego-text">This flower remarks our fourth month together, and it shows both of our favorite colors.</p>
                 </div>
             </div>
         </div>
@@ -351,6 +406,8 @@
             </div>
         </div>
     </section>
+
+    </div><!-- end .main-content -->
 
     <audio id="audioPlayer" preload="none"></audio>
     <script src="script.js"></script>
