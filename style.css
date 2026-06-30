@@ -770,66 +770,7 @@ section#monthsary h3 {
     line-height: 1.7;
 }
 
-/* ──────────────────────────────────────────
-   5TH MONTHSARY MILESTONE
-   ────────────────────────────────────────── */
-.monthsary-card:nth-child(5) {
-    background: linear-gradient(135deg, rgba(10,20,35,0.8) 0%, rgba(20,15,35,0.8) 100%);
-    border: 2px solid #ffd700;
-    box-shadow: 0 0 30px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.1), var(--shadow);
-    position: relative;
-    animation: golden-pulse 3s ease-in-out infinite;
-}
-
-.monthsary-card:nth-child(5)::before {
-    content: '🎉 SPECIAL MILESTONE';
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    background: rgba(255,215,0,0.2);
-    color: #ffd700;
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
-    z-index: 10;
-}
-
-.monthsary-card:nth-child(5)::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255,215,0,0.1) 0%, transparent 50%);
-    pointer-events: none;
-    border-radius: 20px;
-}
-
-.monthsary-card:nth-child(5) .card-title {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255,215,0,0.5);
-}
-
-.monthsary-card:nth-child(5) .card-date {
-    color: #ffd700;
-    font-weight: 600;
-}
-
-.monthsary-card:nth-child(5):hover {
-    transform: translateY(5px) scale(1.02);
-    box-shadow: 0 0 50px rgba(255,215,0,0.6), inset 0 0 30px rgba(255,215,0,0.15), var(--shadow);
-}
-
-@keyframes golden-pulse {
-    0%, 100% { 
-        box-shadow: 0 0 30px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.1), var(--shadow);
-    }
-    50% { 
-        box-shadow: 0 0 50px rgba(255,215,0,0.6), inset 0 0 30px rgba(255,215,0,0.15), var(--shadow);
-    }
-}
-
-/* ══════════════════════════════════════════
+/* ═════════════════════════════════════════
    RANDOM DATE GALLERY
 ══════════════════════════════════════════ */
 #randomdate { align-items: center; }
@@ -977,65 +918,6 @@ section#lego h3 {
 }
 
 .lego-text { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; }
-
-/* ──────────────────────────────────────────
-   5TH LEGO MILESTONE
-   ────────────────────────────────────────── */
-.lego-card:nth-child(5) {
-    background: linear-gradient(135deg, rgba(10,20,35,0.8) 0%, rgba(20,10,30,0.8) 100%);
-    border: 2px solid #ffd700;
-    box-shadow: 0 0 30px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.1), var(--shadow);
-    position: relative;
-    animation: golden-pulse-lego 3s ease-in-out infinite;
-}
-
-.lego-card:nth-child(5)::before {
-    content: '✨ 5TH MONTH SPECIAL';
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    background: rgba(255,215,0,0.2);
-    color: #ffd700;
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
-    z-index: 10;
-}
-
-.lego-card:nth-child(5)::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(255,215,0,0.1) 0%, transparent 50%);
-    pointer-events: none;
-    border-radius: 20px;
-}
-
-.lego-card:nth-child(5) .lego-title {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255,215,0,0.5);
-}
-
-.lego-card:nth-child(5) .card-date {
-    color: #ffd700;
-    font-weight: 600;
-}
-
-.lego-card:nth-child(5):hover {
-    transform: translateY(5px) scale(1.02);
-    box-shadow: 0 0 50px rgba(255,215,0,0.6), inset 0 0 30px rgba(255,215,0,0.15), var(--shadow);
-}
-
-@keyframes golden-pulse-lego {
-    0%, 100% { 
-        box-shadow: 0 0 30px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.1), var(--shadow);
-    }
-    50% { 
-        box-shadow: 0 0 50px rgba(255,215,0,0.6), inset 0 0 30px rgba(255,215,0,0.15), var(--shadow);
-    }
-}
 
 /* ══════════════════════════════════════════
    RESPONSIVE
