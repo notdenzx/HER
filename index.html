@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,11 @@
     <title>ALL ABOUT US</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="assets/photos/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- LOGIN OVERLAY -->
     <div class="login-overlay" id="loginOverlay">
         <div class="floating-hearts-login" id="floatingHeartsLogin"></div>
         <div class="login-card">
@@ -30,19 +30,18 @@
                     <label class="input-label">Password</label>
                     <div class="password-wrapper">
                         <input type="password" id="loginPassword" class="login-input" placeholder="••••" autocomplete="off" />
-                        <button class="eye-btn" id="eyeBtn" type="button">👁</button>
+                        <button class="eye-btn" id="eyeBtn" type="button">👁️</button>
                     </div>
                     <div class="input-hint">💡 Hint: our monthsary</div>
                 </div>
 
                 <div class="login-error" id="loginError">Incorrect username or password. Try again 💔</div>
 
-                <button class="login-btn" id="loginBtn">Enter Our World ✦</button>
+                <button type="button" class="login-btn" id="loginBtn">Enter Our World ✦</button>
             </div>
         </div>
     </div>
 
-    <!-- MAIN CONTENT (hidden until login) -->
     <div class="main-content" id="mainContent" style="display:none;">
 
     <nav class="navbar">
@@ -79,7 +78,6 @@
                     </div>
                 </div>
 
-                <!-- THEME SONG CARD -->
                 <div class="theme-song-card">
                     <div class="song-label">✦ Our Theme Song</div>
                     <div class="song-title-row">
@@ -240,7 +238,6 @@
         </div>
     </section>
 
-    <!-- MONTHSARY DATE -->
     <section id="monthsary">
         <h2>❤️ Monthsary Dates</h2>
         <h3>Here are some of our monthsary memories so far: </h3>
@@ -336,7 +333,7 @@
     </section>
 
     <section id="randomdate">
-        <h2>📸 Random Dates</h2>
+        <h2>📷 Random Dates</h2>
         <p class="gallery-subtitle">✨ Tap a photo to reveal the memory</p>
         <div class="gallery-grid">
             <div class="gallery-item">
@@ -344,8 +341,7 @@
                 <div class="gallery-overlay">
                     <div class="ov-label">📍 BSU - Arasof Campus</div>
                     <div class="ov-icon">💐</div>
-                    <div class="ov-text">The first flower i gave it to her and it so funny kazi i don't have any idea on what's her 
-                        favorite flower</div>
+                    <div class="ov-text">The first flower i gave it to her and it so funny kasi i don't have any idea on what's her favorite flower</div>
                 </div>
             </div>
             <div class="gallery-item">
@@ -376,7 +372,7 @@
                 <img src="assets/photos/d5.jpg" alt="Ms. Secretary with her baby">
                 <div class="gallery-overlay">
                     <div class="ov-label">📍 BSU - Arasof Campus</div>
-                    <div class="ov-icon">📃</div>
+                    <div class="ov-icon">📄</div>
                     <div class="ov-text">Ms. Secretary with her baby</div>
                 </div>
             </div>
@@ -420,7 +416,7 @@
                     <div class="ov-text">Walking with her while raining felt like magic.</div>
                 </div>
             </div>
-                <div class="gallery-item">
+            <div class="gallery-item">
                 <img src="assets/photos/d11.jpg" alt="Memorable Day">
                 <div class="gallery-overlay">
                     <div class="ov-label">📍Reyes Haircutter</div>
@@ -431,9 +427,7 @@
         </div>
     </section>
 
-    </div><!-- end .main-content -->
-
-    <audio id="audioPlayer" preload="none"></audio>
+    </div><audio id="audioPlayer" preload="none"></audio>
     <script src="script.js"></script>
 </body>
 </html>

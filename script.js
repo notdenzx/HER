@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════
+﻿/* ══════════════════════════════════════════
    LOGIN SYSTEM
 ══════════════════════════════════════════ */
 (function () {
@@ -7,40 +7,50 @@
         'den':  '0120'
     };
 
-    const overlay    = document.getElementById('loginOverlay');
+    const overlay = document.getElementById('loginOverlay');
     const mainContent = document.getElementById('mainContent');
     const usernameInput = document.getElementById('loginUsername');
     const passwordInput = document.getElementById('loginPassword');
-    const loginBtn   = document.getElementById('loginBtn');
+    const loginBtn = document.getElementById('loginBtn');
     const loginError = document.getElementById('loginError');
-    const eyeBtn     = document.getElementById('eyeBtn');
+    const eyeBtn = document.getElementById('eyeBtn');
 
-    // Toggle password visibility
+    if (!overlay || !mainContent || !usernameInput || !passwordInput || !loginBtn || !eyeBtn) {
+        console.error('Login elements are missing from the page.');
+        return;
+    }
+
     eyeBtn.addEventListener('click', () => {
         const isPassword = passwordInput.type === 'password';
         passwordInput.type = isPassword ? 'text' : 'password';
         eyeBtn.textContent = isPassword ? '🙈' : '👁';
     });
 
+    function showLoginError() {
+        loginError.classList.add('visible');
+        loginBtn.classList.remove('shake');
+        void loginBtn.offsetWidth;
+        loginBtn.classList.add('shake');
+    }
+
+    function hideLoginError() {
+        loginError.classList.remove('visible');
+    }
+
     function attemptLogin() {
         const username = usernameInput.value.trim().toLowerCase();
         const password = passwordInput.value.trim();
 
         if (VALID_USERS[username] && VALID_USERS[username] === password) {
-            // Success — fade out the login, show main
-            loginError.classList.remove('visible');
+            hideLoginError();
             overlay.classList.add('fade-out');
             setTimeout(() => {
                 overlay.style.display = 'none';
                 mainContent.style.display = 'block';
                 initApp();
-            }, 700);
+            }, 300);
         } else {
-            // Failure — shake the button, show error
-            loginError.classList.add('visible');
-            loginBtn.classList.remove('shake');
-            void loginBtn.offsetWidth; // reflow to restart animation
-            loginBtn.classList.add('shake');
+            showLoginError();
             passwordInput.value = '';
             passwordInput.focus();
         }
@@ -48,14 +58,13 @@
 
     loginBtn.addEventListener('click', attemptLogin);
 
-    // Allow Enter key on both fields
     [usernameInput, passwordInput].forEach(input => {
         input.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') attemptLogin();
         });
+        input.addEventListener('input', hideLoginError);
     });
 
-    // Floating hearts on the login screen
     const loginHeartsContainer = document.getElementById('floatingHeartsLogin');
     const loginHearts = ['💜', '🤍', '✨', '💫', '🩷', '💗'];
 
@@ -82,8 +91,6 @@
    MAIN APP — called after successful login
 ══════════════════════════════════════════ */
 function initApp() {
-
-    // ── Days Counter ──
     const START_DATE = new Date('2026-01-20T00:00:00');
 
     function updateCounter() {
@@ -97,7 +104,6 @@ function initApp() {
     updateCounter();
     setInterval(updateCounter, 60000);
 
-    // ── Floating Hearts (Home) ──
     const container = document.getElementById('floatingHearts');
     if (container) {
         const hearts = ['💜', '🤍', '✨', '💫', '🩷', '💗'];
@@ -119,21 +125,20 @@ function initApp() {
         setInterval(spawnHeart, 2200);
     }
 
-    // ── Music Player ──
-    const audio         = document.getElementById('audioPlayer');
-    const playBtn       = document.getElementById('playBtn');
-    const prevBtn       = document.getElementById('prevBtn');
-    const nextBtn       = document.getElementById('nextBtn');
-    const npTitle       = document.getElementById('npTitle');
-    const npArtist      = document.getElementById('npArtist');
-    const progressFill  = document.getElementById('progressFill');
-    const progressWrap  = document.getElementById('progressWrap');
+    const audio = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const npTitle = document.getElementById('npTitle');
+    const npArtist = document.getElementById('npArtist');
+    const progressFill = document.getElementById('progressFill');
+    const progressWrap = document.getElementById('progressWrap');
     const currentTimeEl = document.getElementById('currentTime');
-    const totalTimeEl   = document.getElementById('totalTime');
-    const volumeSlider  = document.getElementById('volumeSlider');
-    const vinyl         = document.getElementById('vinylDisc');
-    const miniDisc      = document.getElementById('miniDisc');
-    const trackItems    = document.querySelectorAll('.track-item');
+    const totalTimeEl = document.getElementById('totalTime');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const vinyl = document.getElementById('vinylDisc');
+    const miniDisc = document.getElementById('miniDisc');
+    const trackItems = document.querySelectorAll('.track-item');
 
     let currentIndex = 0;
     let isPlaying = false;
@@ -147,6 +152,7 @@ function initApp() {
 
     function loadTrack(index) {
         const track = trackItems[index];
+        if (!track) return;
         audio.src = track.dataset.src;
         audio.volume = parseFloat(volumeSlider.value);
         npTitle.textContent = track.dataset.title;
@@ -229,19 +235,16 @@ function initApp() {
 
     loadTrack(0);
 
-    // ── Gallery reveal (delegated) ──
     const galleryGrid = document.querySelector('.gallery-grid');
     if (galleryGrid) {
-        // Click/tap via delegation so newly added items are handled too
         galleryGrid.addEventListener('click', (e) => {
             const item = e.target.closest('.gallery-item');
             if (!item) return;
             item.classList.toggle('revealed');
         });
 
-        // Make existing items keyboard accessible and ensure Enter/Space toggles reveal
         function makeItemAccessible(item) {
-            if (!item.getAttribute('tabindex')) item.setAttribute('tabindex', '0');
+            if (!item.hasAttribute('tabindex')) item.setAttribute('tabindex', '0');
             item.addEventListener('keydown', (ev) => {
                 if (ev.key === 'Enter' || ev.key === ' ') {
                     ev.preventDefault();
@@ -252,13 +255,11 @@ function initApp() {
 
         galleryGrid.querySelectorAll('.gallery-item').forEach(makeItemAccessible);
 
-        // Observe for dynamically added gallery items (e.g., when user adds images)
         const observer = new MutationObserver(mutations => {
             for (const m of mutations) {
                 for (const node of m.addedNodes) {
                     if (node.nodeType === 1) {
                         if (node.classList && node.classList.contains('gallery-item')) makeItemAccessible(node);
-                        // also handle nested gallery-item elements
                         node.querySelectorAll && node.querySelectorAll('.gallery-item').forEach(makeItemAccessible);
                     }
                 }
@@ -268,7 +269,6 @@ function initApp() {
         observer.observe(galleryGrid, { childList: true, subtree: true });
     }
 
-    // ── Navbar active section highlight ──
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar ul li a');
 
